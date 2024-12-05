@@ -12,6 +12,20 @@
 **** [ ]
 
 
+*** Resources
+**** Official
++ homepage: [[https://zmk.dev][Hello from ZMK Firmware | ZMK Firmware]]
++ docs: [[https://zmk.dev/docs][Introduction to ZMK | ZMK Firmware]]
++ code: [[https://github.com/zmkfirmware/zmk][GitHub - zmkfirmware/zmk: ZMK Firmware Repository]]
+
+**** Helpful Tools
++ visual configerator: [[https://nickcoutsos.github.io/keymap-editor/][Keymap Editor]]
+  - code: [[https://github.com/nickcoutsos/keymap-editor][GitHub - nickcoutsos/keymap-editor: A web based graphical editor of ZMK keymaps.]]
+
+**** Guides & Tips
++ video Introduction: [[https://www.youtube.com/watch?v=Kx8F4xI5yno][Beginner ZMK Tutorial - How to make and modify your ZMK keymap - YouTube]]
+
+
 * About
 |--------------------+---------------+---------------------------------------|
 | CATEGORY           | ANSWER        | DETAILS / FOLLOW-UP                   |
