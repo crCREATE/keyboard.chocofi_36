@@ -1,4 +1,8 @@
-// --- chocofi_36 keyboard ---
+/*
+ * Copyright (c) 2020 The ZMK Contributors
+ *
+ * SPDX-License-Identifier: MIT
+ */
 
 #include <behaviors.dtsi>
 #include <dt-bindings/zmk/bt.h>
@@ -59,10 +63,10 @@
         nav_layer {
             label = "ARROW";
             bindings = <
-  &bt BT_CLR  &bt BT_SEL 1  &bt BT_SEL 2   &bt BT_PRV  &bt BT_NXT    &trans      &kp MINUS  &kp UP      &kp EQUAL  &trans
-  &trans      &trans        &trans         &trans      &trans        &kp INSERT  &kp LEFT   &kp DOWN    &kp RIGHT  &kp PG_UP
-  &trans      &trans        &trans         &trans      &trans        &trans      &kp HOME   &caps_word  &kp END    &kp PG_DN
-                            &kp LS(LCTRL)  &kp LCTRL   &trans        &trans      &trans     &trans
+  &bt BT_CLR  &bt BT_SEL 1  &bt BT_SEL 2   &bt BT_PRV  &bt BT_NXT    &trans    &trans    &trans      &trans     &trans
+  &trans      &trans        &trans         &trans      &trans        &kp LEFT  &kp DOWN  &kp UP      &kp RIGHT  &kp PG_UP
+  &trans      &trans        &trans         &trans      &trans        &trans    &kp HOME  &caps_word  &kp END    &kp PG_DN
+                            &kp LS(LCTRL)  &kp LCTRL   &trans        &trans    &trans    &trans
             >;
         };
 
