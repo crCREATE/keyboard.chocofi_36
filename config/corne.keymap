@@ -1,71 +1,96 @@
-#/*
- * Copyright (c) 2020 The ZMK Contributors
- *
- * SPDX-License-Identifier: MIT
- */
-
-#include <behaviors.dtsi>
-#include <dt-bindings/zmk/bt.h>
-#include <dt-bindings/zmk/keys.h>
-
-#define BASE 0
-#define ARROW 1
-#define NUM 2
-#define SYM 3
-#define MEDIA 4
-
-/ {
-    chosen {
-        //zmk,matrix_transform = &default_transform;
-        zmk,matrix_transform = &five_column_transform;
-    };
-};
-@@ -48,49 +46,49 @@
+~/*
+~ * Copyright (c) 2020 The ZMK Contributors
+~ *
+~ * SPDX-License-Identifier: MIT
+~ */
+~
+~#include <behaviors.dtsi>
+~#include <dt-bindings/zmk/bt.h>
+~#include <dt-bindings/zmk/keys.h>
+~
+~#define BASE 0
+~#define ARROW   1
+~#define NUM  2
+~#define SYM 3
+~#define MACRO 4
+~
+~/ {
+~    chosen {
+~        //zmk,matrix_transform = &default_transform;
+~
+~        zmk,matrix_transform = &five_column_transform;
+~    };
+~};
+~
+~&mt { tapping-term-ms = <150>; };
+~
+~/ {
+~    behaviors {
+~        hm: homerow_mods {
+~            compatible = "zmk,behavior-hold-tap";
+~            label = "HOMEROW_MODS";
+~            #binding-cells = <2>;
+~            tapping-term-ms = <150>;
+~            quick-tap-ms = <0>;
+~            flavor = "tap-preferred";
+~            bindings = <&kp>, <&kp>;
+~        };
+~
+~        auto_repeat: auto_repeat {
+~            compatible = "zmk,behavior-auto-repeat";
+~            label = "AUTO_REPEAT";
+~        };
+~    };
+~
+~    keymap {
+~        compatible = "zmk,keymap";
+~
         Alphas {
             label = "BASE";
             bindings = <
-                &kp Q             &kp W       &kp E               &kp R            &kp T          &kp Y          &kp U            &hm LPAR I           &hm RPAR O  &kp P
-                &hm LEFT_SHIFT A  &hm LALT S  &hm LEFT_CONTROL D  &hm LEFT_GUI F   &hm UNDER G    &hm MINUS H    &hm RIGHT_GUI J  &hm RIGHT_CONTROL K  &hm RALT L  &hm RIGHT_SHIFT SQT
-                &kp Z             &kp X       &kp C               &kp V            &kp B          &kp N          &kp M            &kp COMMA            &kp DOT     &hm QMARK FSLH
-                                    &kp ESC             &lt 2 BACKSPACE  &auto_repeat &lt 1 DEL  &lt 4 TAB    &auto_repeat &lt 3 SPACE  &kp RET
+  &kp Q             &kp W       &kp E               &kp R            &kp T          &kp Y          &kp U            &hm LPAR I           &hm RPAR O  &kp P
+  &hm LEFT_SHIFT A  &hm LALT S  &hm LEFT_CONTROL D  &hm LEFT_GUI F   &hm UNDER G    &hm MINUS H    &hm RIGHT_GUI J  &hm RIGHT_CONTROL K  &hm RALT L  &hm RIGHT_SHIFT SQT
+  &kp Z             &kp X       &kp C               &kp V            &kp B          &kp N          &kp M            &kp COMMA            &kp DOT     &hm QMARK FSLH
+                                &kp ESC             &lt 2 BACKSPACE  &lt 1 DEL      &mt ENTER TAB  &lt 3 SPACE      &kp RET
             >;
         };
 
-        numbers_layer {
-            label = "NUM";
-            bindings = <
-                &trans  &trans  &trans  &trans    &trans    &trans         &hm F7 N7  &hm F8 N8   &hm F9 N9  &hm BSLH PIPE
-                &trans  &trans  &trans  &kp LGUI  &trans    &hm F11 MINUS  &hm F4 N4  &hm F5 N5   &hm F6 N6  &kp EQUAL
-                &trans  &trans  &trans  &trans    &trans    &hm F10 PLUS   &hm F1 N1  &hm F2 N2   &hm F3 N3  &trans
-                              &trans  &trans    &trans    &kp RET        &kp N0     &kp PERIOD
-            >;
-        };
-
-        nav_layer {
-            label = "ARROW";
-            bindings = <
-                &bt BT_CLR  &bt BT_SEL 1  &bt BT_SEL 2   &bt BT_PRV  &bt BT_NXT    &trans    &trans    &trans      &trans     &trans
-                &trans      &trans        &trans         &trans      &trans        &auto_repeat &kp LEFT  &auto_repeat &kp DOWN  &auto_repeat &kp UP  &auto_repeat &kp RIGHT  &kp PG_UP
-                &trans      &trans        &trans         &trans      &trans        &trans    &kp HOME  &caps_word  &kp END    &kp PG_DN
-                                    &kp LS(LCTRL)  &kp LCTRL   &trans        &trans    &trans    &trans
-            >;
-        };
-
-        symbols_layer {
-            label = "SYM";
-            bindings = <
-                &kp EXCL   &kp AT    &kp HASH   &kp DLLR       &kp PRCNT        &hm TILDE GRAVE  &hm F7 N7  &hm F8 N8  &hm F9 N9  &hm BSLH PIPE
-                &trans     &trans    &trans     &hm RBRC LBRC  &kp UNDER        &trans           &trans     &trans     &trans     &trans
-                &kp CARET  &kp AMPS  &kp ASTRK  &hm RPAR LPAR  &hm RBKT LBKT    &trans           &trans     &trans     &trans     &trans
-                               &trans     &trans         &trans           &trans           &trans     &trans
+~        numbers_layer {
+~            label = "NUM";
+~            bindings = <
+~  &trans  &trans  &trans  &trans    &trans    &trans         &hm F7 N7  &hm F8 N8   &hm F9 N9  &hm BSLH PIPE
+~  &trans  &trans  &trans  &kp LGUI  &trans    &hm F11 MINUS  &hm F4 N4  &hm F5 N5   &hm F6 N6  &kp EQUAL
+~  &trans  &trans  &trans  &trans    &trans    &hm F10 PLUS   &hm F1 N1  &hm F2 N2   &hm F3 N3  &trans
+~                  &trans  &trans    &trans    &kp RET        &kp N0     &kp PERIOD
+~            >;
+~        };
+~
+~        nav_layer {
+~            label = "ARROW";
+~            bindings = <
+~  &bt BT_CLR  &bt BT_SEL 1  &bt BT_SEL 2   &bt BT_PRV  &bt BT_NXT    &trans    &trans    &trans      &trans     &trans
+~  &trans      &trans        &trans         &trans      &trans        &kp LEFT  &kp DOWN  &kp UP      &kp RIGHT  &kp PG_UP
+~  &trans      &trans        &trans         &trans      &trans        &trans    &kp HOME  &caps_word  &kp END    &kp PG_DN
+~                            &kp LS(LCTRL)  &kp LCTRL   &trans        &trans    &trans    &trans
+~            >;
+~        };
+~
+~        symbols_layer {
+~            label = "SYM";
+~            bindings = <
+~  &kp EXCL   &kp AT    &kp HASH   &kp DLLR       &kp PRCNT        &hm TILDE GRAVE  &hm F7 N7  &hm F8 N8  &hm F9 N9  &hm BSLH PIPE
+~  &trans     &trans    &trans     &hm RBRC LBRC  &kp UNDER        &trans           &trans     &trans     &trans     &trans
+~  &kp CARET  &kp AMPS  &kp ASTRK  &hm RPAR LPAR  &hm RBKT LBKT    &trans           &trans     &trans     &trans     &trans
+~                       &trans     &trans         &trans           &trans           &trans     &trans
             >;
         };
 
         Media_Keys {
             bindings = <
-  &trans  &trans  &trans  &trans            &trans    &trans  &trans  &trans  &trans  &trans
-  &trans  &trans  &trans  &kp C_PLAY_PAUSE  &trans    &trans  &trans  &trans  &trans  &trans
-  &trans  &trans  &trans  &trans            &trans    &trans  &trans  &trans  &trans  &trans
+  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans
+  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans
+  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans
+                  &trans  &trans  &trans    &trans  &trans  &trans
             >;
         };
     };

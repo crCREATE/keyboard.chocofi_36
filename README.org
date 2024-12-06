@@ -2,14 +2,14 @@
 #+date: <2024-12-05 Thu>
 
 *** TODO
-**** [ ] - design layers
-      - look at soy layout
-      - graphical option?
-      - keymap printout?
-**** [ ] - flash and document process
-**** [ ] - put into version control
+**** [ ] - fix run & start DEV
+**** [ ] - document process
+
 **** [ ] - can the build action be hosted on gitea?
-**** [ ]
+**** [ ] - key repeat on tap tap hold or something
+**** [ ] - symbol layer
+**** [ ] - media keys
+**** [ ] -
 
 
 *** Resources
