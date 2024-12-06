@@ -46,7 +46,7 @@
   &kp Q             &kp W       &kp E               &kp R            &kp T          &kp Y        &kp U            &hm LPAR I           &hm RPAR O  &kp P
   &hm LEFT_SHIFT A  &hm LALT S  &hm LEFT_CONTROL D  &hm LEFT_GUI F   &hm UNDER G    &hm MINUS H  &hm RIGHT_GUI J  &hm RIGHT_CONTROL K  &hm RALT L  &hm RIGHT_SHIFT SQT
   &kp Z             &kp X       &kp C               &kp V            &kp B          &kp N        &kp M            &kp COMMA            &kp DOT     &hm QMARK FSLH
-                                &hm ESC DELETE      &lt 1 BACKSPACE  &lt 1 DEL      &lt 4 TAB    &lt 3 SPACE      &kp RET
+                                &kp ESC             &lt 2 BACKSPACE  &lt 1 DEL      &lt 4 TAB    &lt 3 SPACE      &kp RET
             >;
         };
 
