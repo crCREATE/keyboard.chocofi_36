@@ -35,6 +35,11 @@
             flavor = "tap-preferred";
             bindings = <&kp>, <&kp>;
         };
+
+        auto_repeat: auto_repeat {
+            compatible = "zmk,behavior-auto-repeat";
+            label = "AUTO_REPEAT";
+        };
     };
 
     keymap {
