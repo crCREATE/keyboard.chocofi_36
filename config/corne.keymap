@@ -58,10 +58,10 @@
         numbers_layer {
             label = "NUM";
             bindings = <
-  &trans          &trans  &trans  &trans    &trans    &kp KP_MULTIPLY  &kp N7            &kp N8                &kp N9                  &hm BSLH PIPE
-  &hm LSHIFT TAB  &trans  &trans  &kp LGUI  &trans    &hm F11 MINUS    &hm RIGHT_GUI N4  &hm RIGHT_CONTROL N5  &hm RIGHT_ALT NUMBER_6  &kp EQUAL
-  &trans          &trans  &trans  &trans    &trans    &hm F10 PLUS     &kp NUMBER_1      &kp NUMBER_2          &kp NUMBER_3            &trans
-                          &trans  &trans    &trans    &kp RET          &kp N0            &kp PERIOD
+  &trans          &trans  &trans  &mt RIGHT_BRACKET LBKT      &kp GRAVE    &mt KP_DIVIDE KP_MULTIPLY  &kp N7                  &kp N8                &kp N9                  &hm BSLH PIPE
+  &hm LSHIFT TAB  &trans  &trans  &hm LGUI SINGLE_QUOTE       &kp UNDER    &mt KP_MINUS KP_PLUS       &hm RIGHT_GUI N4        &hm RIGHT_CONTROL N5  &hm RIGHT_ALT NUMBER_6  &kp EQUAL
+  &kp ESC         &trans  &trans  &mt RIGHT_PARENTHESIS LPAR  &trans       &hm F10 PLUS               &kp NUMBER_1            &kp NUMBER_2          &kp NUMBER_3            &kp SINGLE_QUOTE
+                          &trans  &trans                      &trans       &trans                     &mt KP_DOT KP_NUMBER_0  &trans
             >;
         };
 
