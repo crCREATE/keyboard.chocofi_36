@@ -35,6 +35,11 @@
             flavor = "tap-preferred";
             bindings = <&kp>, <&kp>;
         };
+
+        auto_repeat: auto_repeat {
+            compatible = "zmk,behavior-auto-repeat";
+            label = "AUTO_REPEAT";
+        };
     };
 
     keymap {
@@ -43,30 +48,30 @@
         Alphas {
             label = "BASE";
             bindings = <
-  &kp Q             &kp W       &kp E               &kp R            &kp T          &kp Y        &kp U            &hm LPAR I           &hm RPAR O  &kp P
-  &hm LEFT_SHIFT A  &hm LALT S  &hm LEFT_CONTROL D  &hm LEFT_GUI F   &hm UNDER G    &hm MINUS H  &hm RIGHT_GUI J  &hm RIGHT_CONTROL K  &hm RALT L  &hm RIGHT_SHIFT SQT
-  &kp Z             &kp X       &kp C               &kp V            &kp B          &kp N        &kp M            &kp COMMA            &kp DOT     &hm QMARK FSLH
-                                &kp ESC             &lt 2 BACKSPACE  &lt 1 DEL      &lt 4 TAB    &lt 3 SPACE      &kp RET
+  &kp Q             &kp W       &kp E               &kp R            &kp T          &kp Y          &kp U            &kp I                &kp O       &kp P
+  &hm LEFT_SHIFT A  &hm LALT S  &hm LEFT_CONTROL D  &hm LEFT_GUI F   &hm UNDER G    &hm MINUS H    &hm RIGHT_GUI J  &hm RIGHT_CONTROL K  &hm RALT L  &hm RIGHT_SHIFT SQT
+  &kp Z             &kp X       &kp C               &kp V            &kp B          &kp N          &kp M            &kp COMMA            &kp DOT     &hm QMARK FSLH
+                                &kp ESC             &lt 2 BACKSPACE  &lt 1 DEL      &mt ENTER TAB  &lt 3 SPACE      &kp RET
             >;
         };
 
         numbers_layer {
             label = "NUM";
             bindings = <
-  &trans  &trans  &trans  &trans    &trans    &trans         &hm F7 N7  &hm F8 N8   &hm F9 N9  &hm BSLH PIPE
-  &trans  &trans  &trans  &kp LGUI  &trans    &hm F11 MINUS  &hm F4 N4  &hm F5 N5   &hm F6 N6  &kp EQUAL
-  &trans  &trans  &trans  &trans    &trans    &hm F10 PLUS   &hm F1 N1  &hm F2 N2   &hm F3 N3  &trans
-                  &trans  &trans    &trans    &kp RET        &kp N0     &kp PERIOD
+  &trans  &trans  &trans  &trans    &trans    &kp KP_MULTIPLY  &hm F7 N7  &hm F8 N8   &hm F9 N9  &hm BSLH PIPE
+  &trans  &trans  &trans  &kp LGUI  &trans    &hm F11 MINUS    &hm F4 N4  &hm F5 N5   &hm F6 N6  &kp EQUAL
+  &trans  &trans  &trans  &trans    &trans    &hm F10 PLUS     &hm F1 N1  &hm F2 N2   &hm F3 N3  &trans
+                  &trans  &trans    &trans    &kp RET          &kp N0     &kp PERIOD
             >;
         };
 
         nav_layer {
             label = "ARROW";
             bindings = <
-  &bt BT_CLR  &bt BT_SEL 1  &bt BT_SEL 2   &bt BT_PRV  &bt BT_NXT    &trans    &trans    &trans      &trans     &trans
-  &trans      &trans        &trans         &trans      &trans        &kp LEFT  &kp DOWN  &kp UP      &kp RIGHT  &kp PG_UP
-  &trans      &trans        &trans         &trans      &trans        &trans    &kp HOME  &caps_word  &kp END    &kp PG_DN
-                            &kp LS(LCTRL)  &kp LCTRL   &trans        &trans    &trans    &trans
+  &bt BT_CLR  &bt BT_SEL 1  &bt BT_SEL 2   &bt BT_PRV  &bt BT_NXT    &kp HOME  &kp PAGE_UP  &kp PAGE_DOWN  &trans     &trans
+  &trans      &trans        &trans         &trans      &trans        &kp LEFT  &kp DOWN     &kp UP         &kp RIGHT  &none
+  &trans      &trans        &trans         &trans      &trans        &kp END   &none        &caps_word     &none      &none
+                            &kp LS(LCTRL)  &kp LCTRL   &trans        &trans    &trans       &trans
             >;
         };
 
@@ -90,3 +95,4 @@
             >;
         };
     };
+};
