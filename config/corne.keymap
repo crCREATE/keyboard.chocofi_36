@@ -50,33 +50,33 @@
             >;
         };
 
-~        numbers_layer {
-~            label = "NUM";
-~            bindings = <
-~  &trans  &trans  &trans  &trans    &trans    &trans         &hm F7 N7  &hm F8 N8   &hm F9 N9  &hm BSLH PIPE
-~  &trans  &trans  &trans  &kp LGUI  &trans    &hm F11 MINUS  &hm F4 N4  &hm F5 N5   &hm F6 N6  &kp EQUAL
-~  &trans  &trans  &trans  &trans    &trans    &hm F10 PLUS   &hm F1 N1  &hm F2 N2   &hm F3 N3  &trans
-~                  &trans  &trans    &trans    &kp RET        &kp N0     &kp PERIOD
-~            >;
-~        };
-~
-~        nav_layer {
-~            label = "ARROW";
-~            bindings = <
-~  &bt BT_CLR  &bt BT_SEL 1  &bt BT_SEL 2   &bt BT_PRV  &bt BT_NXT    &trans    &trans    &trans      &trans     &trans
-~  &trans      &trans        &trans         &trans      &trans        &kp LEFT  &kp DOWN  &kp UP      &kp RIGHT  &kp PG_UP
-~  &trans      &trans        &trans         &trans      &trans        &trans    &kp HOME  &caps_word  &kp END    &kp PG_DN
-~                            &kp LS(LCTRL)  &kp LCTRL   &trans        &trans    &trans    &trans
-~            >;
-~        };
-~
-~        symbols_layer {
-~            label = "SYM";
-~            bindings = <
-~  &kp EXCL   &kp AT    &kp HASH   &kp DLLR       &kp PRCNT        &hm TILDE GRAVE  &hm F7 N7  &hm F8 N8  &hm F9 N9  &hm BSLH PIPE
-~  &trans     &trans    &trans     &hm RBRC LBRC  &kp UNDER        &trans           &trans     &trans     &trans     &trans
-~  &kp CARET  &kp AMPS  &kp ASTRK  &hm RPAR LPAR  &hm RBKT LBKT    &trans           &trans     &trans     &trans     &trans
-~                       &trans     &trans         &trans           &trans           &trans     &trans
+        numbers_layer {
+            label = "NUM";
+            bindings = <
+  &trans  &trans  &trans  &trans    &trans    &trans         &hm F7 N7  &hm F8 N8   &hm F9 N9  &hm BSLH PIPE
+  &trans  &trans  &trans  &kp LGUI  &trans    &hm F11 MINUS  &hm F4 N4  &hm F5 N5   &hm F6 N6  &kp EQUAL
+  &trans  &trans  &trans  &trans    &trans    &hm F10 PLUS   &hm F1 N1  &hm F2 N2   &hm F3 N3  &trans
+                  &trans  &trans    &trans    &kp RET        &kp N0     &kp PERIOD
+            >;
+        };
+
+        nav_layer {
+            label = "ARROW";
+            bindings = <
+  &bt BT_CLR  &bt BT_SEL 1  &bt BT_SEL 2   &bt BT_PRV  &bt BT_NXT    &trans    &trans    &trans      &trans     &trans
+  &trans      &trans        &trans         &trans      &trans        &kp LEFT  &kp DOWN  &kp UP      &kp RIGHT  &kp PG_UP
+  &trans      &trans        &trans         &trans      &trans        &trans    &kp HOME  &caps_word  &kp END    &kp PG_DN
+                            &kp LS(LCTRL)  &kp LCTRL   &trans        &trans    &trans    &trans
+            >;
+        };
+
+        symbols_layer {
+            label = "SYM";
+            bindings = <
+  &kp EXCL   &kp AT    &kp HASH   &kp DLLR       &kp PRCNT        &hm TILDE GRAVE  &hm F7 N7  &hm F8 N8  &hm F9 N9  &hm BSLH PIPE
+  &trans     &trans    &trans     &hm RBRC LBRC  &kp UNDER        &trans           &trans     &trans     &trans     &trans
+  &kp CARET  &kp AMPS  &kp ASTRK  &hm RPAR LPAR  &hm RBKT LBKT    &trans           &trans     &trans     &trans     &trans
+                       &trans     &trans         &trans           &trans           &trans     &trans
             >;
         };
 
