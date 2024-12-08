@@ -46,15 +46,13 @@
 *** 2 - F#s & Navigation
 window switcher. button
 *** 3 - Media keys & Macros
+- make a media switcher above
 ** Transition questions
 better use thub cluster
 where to put
   - enter
   - tab
   - escape
-move symbles
-  - \|
-  - '"
-  - `~
+symble optimization
 
 * Build & Flash
