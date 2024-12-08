@@ -50,6 +50,11 @@
             key-positions = <5 9>;
             layers = <3>;
         };
+
+        system_power {
+            bindings = <&kp C_POWER>;
+            key-positions = <0 10 20>;
+        };
     };
 
     keymap {
