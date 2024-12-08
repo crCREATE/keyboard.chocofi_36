@@ -44,6 +44,7 @@
 *** 0 - Alphas
 *** 1 - Numaric & symbols
 *** 2 - F#s & Navigation
+window switcher. button
 *** 3 - Media keys & Macros
 ** Transition questions
 better use thub cluster
