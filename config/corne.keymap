@@ -54,7 +54,6 @@
         system_power {
             bindings = <&kp C_POWER>;
             key-positions = <0 10 20 9 19 29>;
-            slow-release;
         };
     };
 
